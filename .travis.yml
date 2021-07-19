@@ -1,0 +1,13 @@
+sudo: false
+language: go
+go_import_path: shanhu.io/misc
+
+go:
+    - "1.16"
+
+install:
+    - go get shanhu.io/sml/cmd/smake
+
+script:
+    - smake
+    - go test ./...
